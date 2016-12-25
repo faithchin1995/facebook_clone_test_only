@@ -72,7 +72,7 @@ RSpec.describe SessionsController, type: :controller do
 
     before do
       post :create, valid_params
-      delete :destroy
+      delete :destroy, id: user.id
     end
 
     it "deletes the session" do
